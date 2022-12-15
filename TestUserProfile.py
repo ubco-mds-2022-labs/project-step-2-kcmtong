@@ -19,9 +19,9 @@ class TestUserProfile(unittest.TestCase) :
 
     def test_str(self):
         self.assertIn('None',str(self.p1))
-        self.assertIn('No',str(self.p1))
+        self.assertIn('False',str(self.p1))
         self.assertIn('Learner',str(self.p2))
-        self.assertIn('Yes',str(self.p2))
+        self.assertIn('True',str(self.p2))
         
     def tearDown(self):
         del(self.p1)
