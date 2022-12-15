@@ -11,16 +11,16 @@ class TestAdvisor(unittest.TestCase) :
         self.oresources2 = Advisor.populateOLResources(2)
         
     def test_populatePrepResources(self):
-        self.assertIn('Learn stage 1',self.prepresources1.resources[0][0])
-        self.assertIn('stage1.com',self.prepresources1.resources[0][1])
-        self.assertIn('Learn stage 2',self.prepresources2.resources[0][0])
-        self.assertIn('stage2.com',self.prepresources2.resources[0][1])
+        self.assertIn('Knowledge Test',self.prepresources1.resources[0][0])
+        self.assertIn('Get-your-L.aspx',self.prepresources1.resources[0][1])
+        self.assertIn('RoadTest 7',self.prepresources2.resources[0][0])
+        self.assertIn('Get-your-N.aspx',self.prepresources2.resources[0][1])
         
     def test_populateOLResources(self):
-        self.assertIn("Test OL",self.oresources1.resources[0][0])
-        self.assertIn("stage1.com",self.oresources1.resources[0][1])
-        self.assertIn("RoadTest7 OL",self.oresources2.resources[0][0])
-        self.assertIn("stage2.com",self.oresources2.resources[0][1])
+        self.assertIn("Book a ICBC Knowledge",self.oresources1.resources[0][0])
+        self.assertIn("maticwebbookin",self.oresources1.resources[0][1])
+        self.assertIn("Book a Road Test 7",self.oresources2.resources[0][0])
+        self.assertIn("webdeas-ui",self.oresources2.resources[0][1])
 
     def tearDown(self):
         del(self.prepresources1)
