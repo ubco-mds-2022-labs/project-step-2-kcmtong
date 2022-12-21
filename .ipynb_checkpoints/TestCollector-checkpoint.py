@@ -6,6 +6,10 @@ from datetime import date
 
 class TestCollector(unittest.TestCase) :    
 
+    @classmethod
+    def setUpClass(cls):
+        pass
+    
     def setUp(self):
         self.age1 = Collector.calculateAge(date(1980,7,18))
         self.age2 = Collector.calculateAge(date(1972,11,3))
@@ -29,3 +33,8 @@ class TestCollector(unittest.TestCase) :
     def tearDown(self):
         del(self.age1)
         del(self.age2)
+
+    @classmethod
+    def tearDownClass(cls):
+        pass
+    

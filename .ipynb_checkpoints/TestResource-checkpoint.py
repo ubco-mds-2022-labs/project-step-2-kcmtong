@@ -5,6 +5,10 @@ from DLAdvisor.Analyzer import Advisor, Resource
 ## TODO (Nowshaba) : Follow the template and fill in the remaining
 class TestResource(unittest.TestCase) :    
 
+    @classmethod
+    def setUpClass(cls):
+        pass
+    
     def setUp(self):
         self.pr1 =  Resource.PrepResource(1,[['Prep Stage ONE','http://pstageone.com']])
         self.or1 =  Resource.OLResource(1,[['OL Stage ONE','http://ostageone.com']])
@@ -28,3 +32,9 @@ class TestResource(unittest.TestCase) :
         del(self.or1)
         del(self.pr2)
         del(self.or2)
+        
+    @classmethod
+    def tearDownClass(cls):
+        pass
+    
+    

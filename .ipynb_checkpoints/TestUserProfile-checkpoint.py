@@ -3,9 +3,10 @@ from DLAdvisor.ProfileBuilder import Collector, UserProfile
 from DLAdvisor.Analyzer import Advisor
 
 class TestUserProfile(unittest.TestCase) :    
-
-#    def setUpClass(cls):
-#        print('setupclass')
+    
+    @classmethod
+    def setUpClass(cls):
+        pass
     
     def setUp(self):
         self.p1 =  UserProfile.UserProfile('Kenny',0,False,False,1)
@@ -33,3 +34,6 @@ class TestUserProfile(unittest.TestCase) :
         del(self.p2)
         del(self.p3)
         
+    @classmethod
+    def tearDownClass(cls):
+        pass
