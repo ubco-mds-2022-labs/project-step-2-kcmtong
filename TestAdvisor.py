@@ -4,6 +4,10 @@ from DLAdvisor.Analyzer import Advisor
 
 class TestAdvisor(unittest.TestCase) :    
 
+    @classmethod
+    def setUpClass(cls):
+        pass
+    
     def setUp(self):
         self.prepresources1 = Advisor.populatePrepResources(1)
         self.prepresources2 = Advisor.populatePrepResources(2)
@@ -44,3 +48,7 @@ class TestAdvisor(unittest.TestCase) :
         del(self.oresources3)
         del(self.oresources4)
         
+    @classmethod
+    def tearDownClass(cls):
+        pass
+    
